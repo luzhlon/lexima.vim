@@ -46,6 +46,7 @@ let g:lexima#default_rules = [
 let g:lexima#default_rules += [
 \ {'char': '"', 'input_after': '"'},
 \ {'char': '"', 'at': '\%#"', 'leave': 1},
+\ {'char': '"', 'at': '\%#\w'},
 \ {'char': '"', 'at': '\\\%#'},
 \ {'char': '"', 'at': '^\s*\%#', 'filetype': 'vim'},
 \ {'char': '"', 'at': '\%#\s*$', 'filetype': 'vim'},
@@ -55,6 +56,7 @@ let g:lexima#default_rules += [
 \ {'char': '<BS>', 'at': '"""\%#"""', 'input': '<BS><BS><BS>', 'delete': 3},
 \ {'char': "'", 'input_after': "'"},
 \ {'char': "'", 'at': '\%#''', 'leave': 1},
+\ {'char': "'", 'at': '\%#\w'},
 \ {'char': "'", 'at': '\w\%#''\@!'},
 \ {'char': "'", 'at': '\\\%#'},
 \ {'char': "'", 'at': '\\\%#', 'leave': 1, 'filetype': ['vim', 'sh', 'csh', 'ruby', 'tcsh', 'zsh']},
